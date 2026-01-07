@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #000000;
+}
+
+header {
+    background-color: #000000;
+    border-bottom: 0.5px solid #84848461;
+    color: white;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+}
+
+.logo {
+    margin-left: 170px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.logo h1 {
+    
+    font-size: 24px;
+
+}
+
+.logo p {
+    
+    font-weight: lighter;
+    font-size: 12px;
+    color: #9c9a9a;
+}
+
+.texto-logo {
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    transform: translateY(-130%);
+    text-decoration: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: #d6d4d4;
+    
+}
+
+header button {
+    position: absolute;
+    right: 130px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fe5e13;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    margin-top: 140px;
+}
+
+section img{
+    width: 500px;
+    height: auto;
+    margin-left: 100px;
+    margin-top: -40px;
+}
+
+.container {
+    margin-left: 170px;
+    margin-top: -40px;
+    color: white;
+    width: 600px;
+}
+
+.container h2 {
+    
+    font-size: 60px;
+    margin-bottom: 20px;
+    
+}
+
+.container h2 span {
+    color: #fe5e13;
+    
+}
+
+.container p {
+    
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: rgb(177, 175, 175);
+}
+
+section .container .adi-car {
+    background-color: #fe5e13;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 20px;
+    color: white;
+    font-weight: bold;
+    
+
+}
+
+section .container .cat {
+    background-color: transparent;
+    padding: 15px 40px;
+    border: 2px solid #fe5e13;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fe5e13;
+    font-weight: bold;
+}
+.bools {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.bool { 
+  color: rgb(165, 163, 163);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+
+}
+
+.bool::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #fe5e13;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.bool-2 {
+    
+  color: rgb(165, 163, 163);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+
+}
+
+.bool-2::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #fe5e13;
+  border-radius: 50%;
+  margin-right: 8px;
+}
