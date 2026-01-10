@@ -23,15 +23,21 @@ header {
     z-index: 1000;
 }
 
-header img {
-    width: 50px;
-    height: auto;
-}
+
 
 .logo {
     margin-left: 170px;
     margin-top: 10px;
     display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    width: 80px;
+    height: 50px;
+    margin-top: 10px;
+
 }
 
 .logo h1 {
@@ -53,6 +59,11 @@ header img {
 
 }
 
+nav {
+    margin-top: -10px;
+
+}
+
 ul {
     list-style-type: none;
     display: flex;
@@ -60,13 +71,18 @@ ul {
     gap: 30px;
     transform: translateY(-130%);
     text-decoration: none;
+
 }
 
 ul a {
     text-decoration: none;
     color: #d6d4d4;
-
 }
+
+ul a:hover {
+    color: #fe5e13;
+}
+
 
 header button {
     position: absolute;
@@ -330,13 +346,13 @@ header button {
     padding: 40px 20px;
     margin-top: 0;
     height: auto;
-    
+
 }
 
 .box-2 h2 {
     font-size: 36px;
     margin-bottom: 20px;
-   
+
 }
 
 .box-2 h2 span {
@@ -362,10 +378,10 @@ header button {
     flex-wrap: wrap;
     /* quebra linha no mobile */
     margin-top: 80px;
-    
+
 }
 
-   .box-3{
+.box-3 {
     width: 320px;
     height: 400px;
     background-color: transparent;
@@ -374,11 +390,11 @@ header button {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
-    
-    }
+
+}
 
 .box-two-box-2 {
-    
+
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -400,17 +416,19 @@ header button {
 }
 
 .img-card {
-  width: 100%;
-  height: 180px;            /* controla a altura real */
-  overflow: hidden;
-  border-radius: 16px;
+    width: 100%;
+    height: 180px;
+    /* controla a altura real */
+    overflow: hidden;
+    border-radius: 16px;
 }
 
 .img-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;        /* 🔥 ISSO É O SEGREDO */
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 🔥 ISSO É O SEGREDO */
+    display: block;
 }
 
 
@@ -420,21 +438,24 @@ header button {
     background-color: #0a121c;
     border-radius: 16px;
 }
+
 .banner h2 {
     font-size: 26px;
     color: white;
-    padding: 20px 0px 10px 0px;
+
 }
 
 .banner p {
     font-size: 16px;
     color: rgb(177, 175, 175);
-    padding: 20px 0px 0px 0px;
+
     line-height: 1.7;
 }
+
 .banner span {
     color: #fe5e13;
 }
+
 
 
 
@@ -458,7 +479,7 @@ header button {
 }
 
 .section-4 {
-   background-color: #0a121c;
+    background-color: #0a121c;
     color: white;
     text-align: center;
     padding: 40px 20px;
@@ -479,7 +500,7 @@ header button {
     color: rgb(177, 175, 175);
 }
 
-.calculo-compra{
+.calculo-compra {
     width: 50%;
     height: 600px;
     margin: 0 auto;
@@ -489,18 +510,22 @@ header button {
     border: solid 1px #fe5e13;
     background-color: #000;
     align-items: center;
+    
+    
 }
 
 .calculo-left {
     color: #ffffff;
     font-family: "Poppins", sans-serif;
     width: 40%;
+   
 }
 
 .calculo-left h3 {
     font-size: 48px;
     font-weight: 700;
-    color: #ff7a00; /* laranja igual ao da imagem */
+    color: #ff7a00;
+    /* laranja igual ao da imagem */
     margin: 0;
 }
 
@@ -522,41 +547,44 @@ header button {
 /* Bolinha check laranja */
 .calculo-left p:not(:first-of-type)::before {
     content: "✔";
-    color: #ff7a00;      /* laranja */
+    color: #ff7a00;
+    /* laranja */
     font-size: 18px;
     font-weight: bold;
     display: inline-block;
 }
 
-.calculo-right{
+.calculo-right {
     width: 60%;
     height: auto;
-    margin-top:50px;
+    margin-top: 50px;
     margin-right: -90px;
+        
+    
 }
 
-.calculo-right img{
+.calculo-right img {
     width: 100%;
     height: auto;
     padding: 10px;
     border-radius: 20px;
 }
 
-.calculo-right-elements{
+.calculo-right-elements {
     width: 80%;
     min-height: 400px;
     margin-bottom: 20px;
-    background-color:#0a121c;
+    background-color: #0a121c;
     height: 500px;
     padding: 10px;
     border-radius: 10px;
 }
 
-.texts{
+.texts {
     margin-top: 50px;
 }
 
-.texts .quantidade{
+.texts .quantidade {
     text-align: left;
     margin-left: 20px;
     margin-bottom: 10px;
@@ -564,7 +592,7 @@ header button {
     color: #abaaaa;
 }
 
-.texts input{
+.texts input {
     color: white;
     font-size: 12px;
     font-weight: 600;
@@ -578,30 +606,31 @@ header button {
     border: none;
     background-color: #181f29;
 }
-.total-button{
-    margin-top: 20px; 
+
+.total-button {
+    margin-top: 20px;
 }
 
-.total-button p{
+.total-button p {
     font-size: 12px;
     font-weight: bold;
     color: #abaaaa;
 
 }
 
-.total-button span{
+.total-button span {
     font-size: 24px;
     font-weight: bold;
     color: #fe5e13;
 }
 
-.total{
+.total {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
- .texts button{
+.texts button {
     background-color: #fe5e13;
     width: 90%;
     padding: 15px 60px;
@@ -613,4 +642,151 @@ header button {
     font-weight: bold;
     margin-top: 20px;
     top: 20px;
-}                       
+}
+
+.total-button button:hover {
+    background-color: #ff7a00;
+
+    box-shadow: 0 4px 8px rgba(255, 123, 0, 0.595);
+}
+
+.section-5 {
+    width: 100%;
+    height: auto;
+
+}
+
+.topo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.topo h3 {
+    font-size: 3 6px;
+    margin-bottom: 10px;
+
+}
+
+.container-left-2 img {
+    width: 500px;
+    border-radius: 10px;
+}
+
+.fundador {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 50px;
+}
+
+.container-left-2 {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-right-2 {
+    width: 40%;
+    width: 500px;
+    height:550px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+    border: solid 1px #fe5e13;
+}
+
+.box-5{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 600px;
+
+}
+
+.container-right-2 h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #fe5e13;
+    text-align: center;
+    display: flex;
+    position: relative;
+    left: 0px;
+
+}
+
+.box-5 .introducao {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+
+.box-5 .apresentation{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+    height: auto;
+}
+
+.box-5 .icon{
+   margin-top: 20px;
+}
+
+.box-5 .icon::before {
+    content: "✔";
+    color: #fe5e13;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.fala-do-pai{
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+    font-family: "Georgia", sans-serif;  
+}
+
+.box-5 span{
+    color: #fe5e13;
+    font-family: "Georgia", sans-serif; 
+}
+
+.quote-box span {
+  display: block;
+  margin-top: 8px;
+  color: #ff7a00;
+  font-style: italic;
+} 
+
+.quote-box {
+    position: relative;        /* necessário para posicionar o ::before */
+  padding-left: 18px;        /* espaço entre a linha e o texto */
+  font-family: Georgia, serif;
+  color: white;    
+}
+
+.quote-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;              /* altura da linha */
+  width: 4px;                /* espessura */
+  background-color: #ff7a00; /* cor da linha */
+  border-radius: 2px;        /* arredondamento igual da imagem */
+}
+
+  
