@@ -7,6 +7,8 @@
 
 body {
     background-color: #0b0b0b;
+    padding: 0;
+    box-sizing: border-box;
     margin: 0;
 }
 
@@ -510,15 +512,15 @@ header button {
     border: solid 1px #fe5e13;
     background-color: #000;
     align-items: center;
-    
-    
+
+
 }
 
 .calculo-left {
     color: #ffffff;
     font-family: "Poppins", sans-serif;
     width: 40%;
-   
+
 }
 
 .calculo-left h3 {
@@ -559,8 +561,8 @@ header button {
     height: auto;
     margin-top: 50px;
     margin-right: -90px;
-        
-    
+
+
 }
 
 .calculo-right img {
@@ -654,6 +656,7 @@ header button {
     width: 100%;
     height: auto;
 
+
 }
 
 .topo {
@@ -695,14 +698,14 @@ header button {
 .container-right-2 {
     width: 40%;
     width: 500px;
-    height:550px;
+    height: 550px;
     background-color: #000000;
     color: #ffffff;
     border-radius: 10px;
     border: solid 1px #fe5e13;
 }
 
-.box-5{
+.box-5 {
     width: 80%;
     margin: 0 auto;
     margin-top: 30px;
@@ -730,7 +733,7 @@ header button {
 
 }
 
-.box-5 .apresentation{
+.box-5 .apresentation {
     margin-top: 20px;
     font-size: 14px;
     line-height: 1.6;
@@ -738,8 +741,8 @@ header button {
     height: auto;
 }
 
-.box-5 .icon{
-   margin-top: 20px;
+.box-5 .icon {
+    margin-top: 20px;
 }
 
 .box-5 .icon::before {
@@ -751,42 +754,192 @@ header button {
     margin-right: 10px;
 }
 
-.fala-do-pai{
+.fala-do-pai {
     margin-top: 30px;
     font-size: 14px;
     line-height: 1.6;
     text-align: justify;
-    font-family: "Georgia", sans-serif;  
+    font-family: "Georgia", sans-serif;
 }
 
-.box-5 span{
+.box-5 span {
     color: #fe5e13;
-    font-family: "Georgia", sans-serif; 
+    font-family: "Georgia", sans-serif;
 }
 
 .quote-box span {
-  display: block;
-  margin-top: 8px;
-  color: #ff7a00;
-  font-style: italic;
-} 
+    display: block;
+    margin-top: 8px;
+    color: #ff7a00;
+    font-style: italic;
+}
 
 .quote-box {
-    position: relative;        /* necessário para posicionar o ::before */
-  padding-left: 18px;        /* espaço entre a linha e o texto */
-  font-family: Georgia, serif;
-  color: white;    
+    position: relative;
+    /* necessário para posicionar o ::before */
+    padding-left: 18px;
+    /* espaço entre a linha e o texto */
+    font-family: Georgia, serif;
+    color: white;
 }
 
 .quote-box::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;              /* altura da linha */
-  width: 4px;                /* espessura */
-  background-color: #ff7a00; /* cor da linha */
-  border-radius: 2px;        /* arredondamento igual da imagem */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    /* altura da linha */
+    width: 4px;
+    /* espessura */
+    background-color: #ff7a00;
+    /* cor da linha */
+    border-radius: 2px;
+    /* arredondamento igual da imagem */
 }
 
-  
+.section-6 {
+    width: 100%;
+    height: 100vh;
+    background-color: #0a121c;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.title {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.title h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+
+}
+
+.title p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: rgb(177, 175, 175);
+}
+
+.main-cubo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+
+    .quadrado {
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    border: solid 1px #fe5e13;
+    padding: 30px;
+     /* fundo com transparência */
+    background: rgba(255, 255, 255, 0.15);
+
+    /* efeito de vidro fosco */
+    backdrop-filter: blur(10px);
+
+    /* borda suave */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    /* opcional: sombra leve */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pedido-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    
+}
+
+.pedido {
+    text-align: center;
+    color: white;
+    
+}
+
+.icone {
+    width: 70px;
+    height: 70px;
+    background-color: #fe5e13;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+    cursor: pointer;
+}
+
+.icone img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(1); /* deixa ícone branco */
+    
+}
+
+.pedido h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.pedido p {
+    font-size: 15px;
+    color: #cfcfcf;
+}
+
+.add-car {
+    width: 90%;
+    background-color: #fe5e13;
+    border: none;
+    padding: 15px 0;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.contato {
+    display: flex;
+    gap: 15px;
+}
+
+
+
+.ligar {
+    background-color: #1e2530;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.whatsapp {
+    background-color: #15c45c;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
