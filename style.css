@@ -18,7 +18,9 @@ header {
     color: white;
     padding: 0px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     position: sticky;
     top: 0;
@@ -32,18 +34,19 @@ header {
     margin-top: 10px;
     display: flex;
     align-items: center;
+    align-items: center;
 
 }
 
 .logo img {
     width: 80px;
     height: 50px;
-    margin-top: 10px;
+    margin-top: 0px;
 
 }
 
 .logo h1 {
-
+    margin-top: auto;
     font-size: 24px;
 
 }
@@ -57,13 +60,74 @@ header {
 
 .texto-logo {
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
 
 }
 
 nav {
-    margin-top: -10px;
+    margin-top: auto;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
+/* Menu Hambúrguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 12px 15px;
+    z-index: 999;
+    align-self: center;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.btn-pedido {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    background-color: #fe5e13;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(254, 94, 19, 0.3);
+    margin-right: 20px;
+}
+
+.btn-pedido:hover {
+    background-color: #ff7a00;
+    box-shadow: 0 6px 16px rgba(254, 94, 19, 0.5);
+    transform: translateY(-2px);
 }
 
 ul {
@@ -1105,6 +1169,7 @@ footer {
     header {
         padding: 15px 15px;
         border-bottom: 2px solid #fe5e13;
+        flex-wrap: wrap;
     }
 
     .logo {
@@ -1121,11 +1186,51 @@ footer {
         font-size: 22px;
     }
 
-    ul {
+    /* Mostrar hamburger em mobile */
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #000000;
+        flex-direction: column;
+        width: 100%;
+        border-bottom: 2px solid #fe5e13;
+        z-index: 100;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
         transform: translateY(0);
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-top: 10px;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        padding: 12px 20px;
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .btn-pedido {
+        display: none;
     }
 
     ul a {
