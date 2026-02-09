@@ -26,3 +26,16 @@ document.addEventListener('click', (event) => {
         navMenu.classList.remove('active');
     }
 });
+
+const qntInput = document.querySelector('.qnt-peça');
+
+function calculateTotal() {
+    const quantity = document.querySelector('.qnt-peça').value;
+    const valorPeca = 2.50;
+    const total = valorPeca * quantity;
+    document.querySelector('.total-value').textContent = `R$ ${total.toFixed(2)}`;
+    
+    
+}
+
+document.querySelector('.calculate-valor').addEventListener('click', calculateTotal);
