@@ -27,6 +27,34 @@ header {
     z-index: 1000;
 }
 
+/* indicador de rolagem do header (move horizontalmente conforme o scroll da página) */
+.header-scroll-indicator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px; /* posiciona ligeiramente abaixo da borda do header */
+    height: 8px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.header-scroll-indicator__bar {
+    /* começa pequena e cresce conforme o usuário rola a página */
+    width: 48px;               /* valor inicial (será atualizado via JS) */
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg,#fe5e13,#ffb86b);
+    transform-origin: left center;
+    transition: width .18s linear, background .2s ease;
+    box-shadow: 0 4px 12px rgba(254,94,19,0.18);
+    will-change: width;
+}
+
+
+
 
 
 .logo {
@@ -128,6 +156,37 @@ nav {
     background-color: #ff7a00;
     box-shadow: 0 6px 16px rgba(254, 94, 19, 0.5);
     transform: translateY(-2px);
+}
+
+.cart-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    background: #ffffff;
+    color: #fe5e13;
+    border-radius: 999px;
+    font-weight: 700;
+    margin-left: 8px;
+    font-size: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.adi-car-2, .card-footer button {
+    background: #fe5e13;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform .15s ease, background .15s ease;
+}
+
+.adi-car-2.added {
+    background: #27ae60;
+    transform: scale(0.98);
 }
 
 ul {
@@ -1191,7 +1250,7 @@ footer {
         display: flex;
         position: absolute;
         right: 15px;
-        top: 15px;
+        top: 45px;
     }
 
     .nav-menu {
@@ -1230,7 +1289,9 @@ footer {
     }
 
     .btn-pedido {
-        display: none;
+        position: static;
+        transform: none;
+        margin: 15px auto;
     }
 
     ul a {
@@ -1238,9 +1299,8 @@ footer {
         font-weight: 500;
     }
 
-    header button {
-        display: none; /* botão some no mobile */
-    }
+
+
 
     /* SECTION 1 */
     .section-1 {

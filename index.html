@@ -25,13 +25,20 @@
             </button>
             <nav id="nav-menu" class="nav-menu">
                 <ul>
-                    <li><a href="#home">Produtos</a></li>
+                    <li><a href="#catalog">Produtos</a></li>
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#services">Preços</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#calc">Calcular Quantidade</a></li>
+                    <li><a href="https://wa.me/5511951146301" target="_blank">Contato</a></li>
                 </ul>
             </nav>
-            <button class="btn-pedido"> <strong>Fazer Pedido</strong></button>
+            <button class="btn-pedido"> <strong>Ver Carrinho</strong><span class="cart-count" aria-live="polite">0</span></button>
+
+            <!-- indicador de rolagem (linha que se move horizontalmente abaixo do header) -->
+            <div class="header-scroll-indicator" aria-hidden="true">
+                <div class="header-scroll-indicator__bar"></div>
+            </div>
+
         </header>
         <section class="section-1">
             <div class="container">
@@ -159,7 +166,7 @@
                 <p>Estojos de qualidade com preços competitivos para seu negócio</p>
             </div><!--box-4-->
 
-            <main class="calculo-compra">
+            <main class="calculo-compra" id="calc">
                 <div class="calculo-left">
                     <h3>R$ 2,50</h3>
                     <p>por unidade</p>
@@ -185,7 +192,7 @@
                 </div><!--calculo-right-->
             </main>
         </section>
-        <section class="section-5">
+        <section class="section-5" id="about">
             <div class="topo">
                 <h3>Sobre o Fundador</h3>
                 <p>Conheça a história por trás da Injet Estojo Nobre LTDA</p>
