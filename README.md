@@ -65,4 +65,14 @@ https://gabriel100-pro.github.io/Site-oficial-InjetNobre/
 
 ---
 
-LinkedIn;
+
+📍 Jundiaí - SP<br>
+📧 contato.gabrielalmeida10@gmail.com<br>
+🔗 LinkedIn: linkedin.com/in/gabrielcarlosalexandre
+</p>
+
+<hr>
+
+<h3 align="center">
+⭐ Se você gostou do projeto, deixe uma estrela no repositório!
+</h3>
