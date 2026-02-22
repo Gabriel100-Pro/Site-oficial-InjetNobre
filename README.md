@@ -1,16 +1,9 @@
-# 🟠 InjetNobre - E-commerce de Estojos Premium
+# InjetNobre - E-commerce de Estojos Premium
 
 Projeto de vendas online desenvolvido para a empresa **Injet Nobre LTDA**, especializada na fabricação de estojos premium para relógios.
 
 A plataforma foi desenvolvida com foco em experiência do usuário e conversão de vendas, oferecendo catálogo de produtos, carrinho dinâmico e uma calculadora inteligente.
 
----
-
-## 🚀 Demonstração
-
-🔗 Acesse o projeto online:  
-
-https://gabriel100-pro.github.io/Site-oficial-InjetNobre/
 ---
 
 ## 🖥️ Funcionalidades
@@ -61,6 +54,14 @@ A calculadora utiliza JavaScript para:
 1. Capturar a quantidade informada pelo usuário
 2. Multiplicar pelo valor unitário (R$ 2,50)
 3. Retornar o valor total com rapidez.
+
+---
+
+## 🚀 Demonstração
+
+🔗 Acesse o projeto online:  
+
+https://gabriel100-pro.github.io/Site-oficial-InjetNobre/
 
 ---
 
