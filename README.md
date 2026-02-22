@@ -1,71 +1,98 @@
-# InjetNobre - E-commerce de Estojos Premium
+<h1 align="center"><strong>Injet Nobre</strong></h1>
 
-Projeto de vendas online desenvolvido para a empresa **Injet Nobre LTDA**, especializada na fabricação de estojos premium para relógios.
+<p>
+Projeto de vendas online desenvolvido para a empresa <strong>Injet Nobre LTDA</strong>, especializada na fabricação de estojos premium para relógios.
+</p>
 
+<p>
 A plataforma foi desenvolvida com foco em experiência do usuário e conversão de vendas, oferecendo catálogo de produtos, carrinho dinâmico e uma calculadora inteligente.
+</p>
 
----
+<hr>
 
-## 🖥️ Funcionalidades
+<h2>🖥️ Funcionalidades</h2>
 
-### 🛒 Sistema de Carrinho
-- Adição dinâmica de produtos ao carrinho.
-- Visualização dos produtos selecionados.
-- Interface simples e fácil de usar.
+<h3>🛒 Sistema de Carrinho</h3>
+<ul>
+  <li>Adição dinâmica de produtos ao carrinho.</li>
+  <li>Visualização dos produtos selecionados.</li>
+  <li>Interface simples e fácil de usar.</li>
+</ul>
 
-### 🧮 Calculadora de Pedido
-O sistema possui uma **calculadora automática de valor** onde:
+<h3>🧮 Calculadora de Pedido</h3>
+<p>
+O sistema possui uma <strong>calculadora automática de valor</strong> onde:
+</p>
 
-- O usuário informa a quantidade desejada.
-- Clica em **"Calcular Valor"**
-- O sistema calcula automaticamente o total com base no valor unitário.
-- Exibe o valor final de forma clara e imediata.
+<ul>
+  <li>O usuário informa a quantidade desejada.</li>
+  <li>Clica em <strong>"Calcular Valor"</strong></li>
+  <li>O sistema calcula automaticamente o total com base no valor unitário.</li>
+  <li>Exibe o valor final de forma clara e imediata.</li>
+</ul>
 
-### 📦 Catálogo de Produtos
-- Exibição organizada dos estojos disponíveis.
-- Botões de ação estratégicos.
+<h3>📦 Catálogo de Produtos</h3>
+<ul>
+  <li>Exibição organizada dos estojos disponíveis.</li>
+  <li>Botões de ação estratégicos.</li>
+</ul>
 
-### 🏢 Páginas Institucionais
-- Sobre o Fundador.
-- Contato.
-- Informações comerciais.
+<h3>🏢 Páginas Institucionais</h3>
+<ul>
+  <li>Sobre o Fundador.</li>
+  <li>Contato.</li>
+  <li>Informações comerciais.</li>
+</ul>
 
-### 📱 Responsividade
-- Layout adaptado para Desktop.
-- Versão Mobile.
+<h3>📱 Responsividade</h3>
+<ul>
+  <li>Layout adaptado para Desktop.</li>
+  <li>Versão Mobile.</li>
+</ul>
 
----
+<hr>
 
-## 🛠️ Tecnologias Utilizadas
+<h2>🛠️ Tecnologias Utilizadas</h2>
 
-- **HTML5** → Bem organizado e com boa semântica. 
-- **CSS3** → Boa estilização e boa responsividade.
-- **JavaScript (Vanilla JS)** → - Manipulação do DOM 
-  - Lógica do carrinho
-  - Cálculo dinâmico de valores
-  - Interações do usuário
+<ul>
+  <li><strong>HTML5</strong> → Bem organizado e com boa semântica.</li>
+  <li><strong>CSS3</strong> → Boa estilização e boa responsividade.</li>
+  <li>
+    <strong>JavaScript (Vanilla JS)</strong> →
+    <ul>
+      <li>Manipulação do DOM</li>
+      <li>Lógica do carrinho</li>
+      <li>Cálculo dinâmico de valores</li>
+      <li>Interações do usuário</li>
+    </ul>
+  </li>
+</ul>
 
----
+<hr>
 
-## 🧠 Lógica da Calculadora
+<h2>🧠 Lógica da Calculadora</h2>
 
-A calculadora utiliza JavaScript para:
+<p>A calculadora utiliza JavaScript para:</p>
 
-1. Capturar a quantidade informada pelo usuário
-2. Multiplicar pelo valor unitário (R$ 2,50)
-3. Retornar o valor total com rapidez.
+<ol>
+  <li>Capturar a quantidade informada pelo usuário</li>
+  <li>Multiplicar pelo valor unitário (R$ 2,50)</li>
+  <li>Retornar o valor total com rapidez.</li>
+</ol>
 
----
+<hr>
 
-## 🚀 Demonstração
+<h2>🚀 Demonstração</h2>
 
-🔗 Acesse o projeto online:  
+<p>🔗 Acesse o projeto online:</p>
 
+<p>
 https://gabriel100-pro.github.io/Site-oficial-InjetNobre/
+</p>
 
----
+<hr>
 
-
+<p>
 📍 Jundiaí - SP<br>
 📧 contato.gabrielalmeida10@gmail.com<br>
 🔗 LinkedIn: linkedin.com/in/gabrielcarlosalexandre
