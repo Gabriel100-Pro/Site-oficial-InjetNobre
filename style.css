@@ -32,8 +32,8 @@ header {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -6px; /* posiciona ligeiramente abaixo da borda do header */
-    height: 8px;
+    bottom: -2px; /* posiciona ligeiramente abaixo da borda do header */
+    height: 2px;
     pointer-events: none;
     display: flex;
     align-items: center;
