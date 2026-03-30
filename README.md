@@ -10,6 +10,12 @@ A plataforma foi desenvolvida com foco em experiência do usuário e conversão 
 
 <hr>
 
+## 🖥️ Preview do Projeto
+
+<p align="center">
+  <img src="./assets/Mockups Injet Nobre.png" width="100%" />
+</p>
+
 <h2>🖥️ Funcionalidades</h2>
 
 <h3>🛒 Sistema de Carrinho</h3>
