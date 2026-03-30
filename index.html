@@ -178,12 +178,19 @@
                         <div class="texts">
                             <p class="quantidade">Quantidade (mín. 100)</p>
                             <input class="qnt-peça" type="number" value="100" min="100">
+                            <p class="quantidade">Escolha o modelo da caixa</p>
+                            <select class="box-type-select" aria-label="Selecionar modelo da caixa">
+                                <option value="Estojo Clássico">Estojo Clássico</option>
+                                <option value="Estojo Duplo">Estojo Duplo</option>
+                                <option value="Estojo Múltiplo">Estojo Múltiplo</option>
+                            </select>
                             <div class="total-button">
                                 <div class="total">
                                     <p>Total:</p>
                                     <span class="total-value">R$ 250,00</span>
                                 </div>
                                 <button class="calculate-valor">Calcular Preço</button>
+                                <button class="add-calc-cart" type="button">Adicionar ao Carrinho</button>
                             </div><!--total-button-->
                         </div><!--texts-->
                     </div><!--calculo-right-elements-->
@@ -262,6 +269,13 @@
                 <button class="cart-close" type="button" data-close-cart aria-label="Fechar carrinho">×</button>
             </div>
             <p class="cart-modal-subtitle">Veja os produtos e as quantidades adicionadas.</p>
+            <div class="cart-confirm-banner" id="cart-confirm-banner" aria-hidden="true">
+                <p>Tem certeza?</p>
+                <div class="cart-confirm-actions">
+                    <button class="cart-confirm-yes" id="confirm-clear-cart" type="button">Sim, limpar</button>
+                    <button class="cart-confirm-no" id="cancel-clear-cart" type="button">Cancelar</button>
+                </div>
+            </div>
             <ul class="cart-items" id="cart-items"></ul>
             <p class="cart-empty" id="cart-empty">Seu carrinho esta vazio.</p>
             <div class="cart-summary" id="cart-summary">

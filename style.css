@@ -695,7 +695,8 @@ header button:hover {
 
 .calculo-compra {
     width: 50%;
-    height: 600px;
+    min-height: 600px;
+    height: auto;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -750,8 +751,10 @@ header button:hover {
 .calculo-right {
     width: 60%;
     height: auto;
-    margin-top: 50px;
-    margin-right: -90px;
+    margin-top: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
 
 
 }
@@ -768,13 +771,13 @@ header button:hover {
     min-height: 400px;
     margin-bottom: 20px;
     background-color: #0a121c;
-    height: 500px;
-    padding: 10px;
+    height: auto;
+    padding: 10px 10px 20px;
     border-radius: 10px;
 }
 
 .texts {
-    margin-top: 50px;
+    margin-top: 24px;
 }
 
 .texts .quantidade {
@@ -801,7 +804,27 @@ header button:hover {
     transition: all 0.3s ease;
 }
 
+.texts select {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+    border-radius: 10px;
+    width: 90%;
+    margin: 10px auto 0;
+    padding: 15px;
+    border: 2px solid #fe5e13;
+    background-color: #181f29;
+    transition: all 0.3s ease;
+}
+
 .texts input:focus {
+    outline: none;
+    border-color: #ff7a00;
+    box-shadow: 0 0 12px rgba(254, 94, 19, 0.3);
+}
+
+.texts select:focus {
     outline: none;
     border-color: #ff7a00;
     box-shadow: 0 0 12px rgba(254, 94, 19, 0.3);
@@ -809,6 +832,9 @@ header button:hover {
 
 .total-button {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .total-button p {
@@ -833,6 +859,8 @@ header button:hover {
 .texts button {
     background-color: #fe5e13;
     width: 90%;
+    max-width: 420px;
+    display: block;
     padding: 15px 60px;
     border: none;
     border-radius: 5px;
@@ -840,10 +868,22 @@ header button:hover {
     cursor: pointer;
     color: white;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
     top: 20px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(254, 94, 19, 0.3);
+}
+
+.texts .add-calc-cart {
+    background-color: transparent;
+    border: 2px solid #fe5e13;
+}
+
+.texts .add-calc-cart:hover {
+    background-color: #fe5e13;
+    box-shadow: 0 6px 20px rgba(254, 94, 19, 0.5);
 }
 
 .texts button:hover {
@@ -1228,6 +1268,50 @@ footer::before {
     margin-bottom: 18px;
 }
 
+.cart-confirm-banner {
+    display: none;
+    margin-bottom: 16px;
+    border: 1px solid #ffd7c4;
+    background: #fff3ec;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cart-confirm-banner.is-visible {
+    display: block;
+}
+
+.cart-confirm-banner p {
+    color: #8b3c15;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.cart-confirm-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.cart-confirm-actions button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cart-confirm-yes {
+    background: #fe5e13;
+    color: #fff;
+}
+
+.cart-confirm-no {
+    background: #1f2937;
+    color: #fff;
+}
+
 .cart-items {
     list-style: none;
     display: flex;
@@ -1274,6 +1358,12 @@ footer::before {
     color: #1a1a1a;
     font-weight: 600;
     margin-bottom: 6px;
+}
+
+.cart-item-option {
+    font-size: 13px;
+    color: #5f5f5f;
+    margin-bottom: 4px;
 }
 
 .cart-item-details {
@@ -1724,6 +1814,16 @@ footer::before {
         font-size: 14px;
         padding: 12px;
         width: 100%;
+    }
+
+    .texts select {
+        font-size: 14px;
+        padding: 12px;
+        width: 100%;
+    }
+
+    .total-button {
+        gap: 10px;
     }
 
     .total-button p {

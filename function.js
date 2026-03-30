@@ -28,18 +28,37 @@ document.addEventListener('click', (event) => {
 });
 
 const qntInput = document.querySelector('.qnt-peça');
+const calcBoxSelect = document.querySelector('.box-type-select');
+const addCalcCartButton = document.querySelector('.add-calc-cart');
+const PRICE_PER_UNIT = 2.50;
+
+const boxImageMap = {
+    'Estojo Clássico': './assets/Estojo individual.webp',
+    'Estojo Duplo': './assets/Estojo Duplo.webp',
+    'Estojo Múltiplo': './assets/Estojo Multiplo.webp'
+};
+
+function getValidCalcQuantity() {
+    const rawValue = qntInput ? Number(qntInput.value) : 0;
+    const quantity = Number.isFinite(rawValue) ? Math.floor(rawValue) : 0;
+
+    if (quantity < 100) {
+        alert('A quantidade mínima é de 100 peças.');
+        if (qntInput) qntInput.value = 100;
+        return null;
+    }
+
+    return quantity;
+}
 
 function calculateTotal() {
-    const quantity = document.querySelector('.qnt-peça').value;
-    const valorPeca = 2.50;
-    const total = valorPeca * quantity;
-    document.querySelector('.total-value').textContent = `R$ ${total.toFixed(2)}`;
-    
-    if( quantity <= 99.99){
-        alert("A quantidade mínima é de 100 peças.");
-        document.querySelector('.qnt-peça').value = null;
-        document.querySelector('.total-value').textContent = `R$ 0.00`;
-    }
+    const quantity = getValidCalcQuantity();
+    if (!quantity) return null;
+
+    const total = PRICE_PER_UNIT * quantity;
+    document.querySelector('.total-value').textContent = formatBRL(total);
+
+    return { quantity, total };
 }
 
 document.querySelector('.calculate-valor').addEventListener('click', calculateTotal);
@@ -57,6 +76,7 @@ function loadCart() {
             name: item.name || 'Produto',
             price: Number(item.price) || 0,
             quantity: Math.max(1, Number(item.quantity) || 1),
+            boxType: typeof item.boxType === 'string' ? item.boxType : '',
             image: typeof item.image === 'string' ? item.image : '',
             imageAlt: typeof item.imageAlt === 'string' ? item.imageAlt : 'Imagem do produto'
         }));
@@ -99,6 +119,21 @@ const cartSummary = document.getElementById('cart-summary');
 const cartTotalItems = document.getElementById('cart-total-items');
 const cartTotalPrice = document.getElementById('cart-total-price');
 const cartClearButton = document.getElementById('cart-clear');
+const cartConfirmBanner = document.getElementById('cart-confirm-banner');
+const confirmClearCartButton = document.getElementById('confirm-clear-cart');
+const cancelClearCartButton = document.getElementById('cancel-clear-cart');
+
+function showClearCartBanner() {
+    if (!cartConfirmBanner) return;
+    cartConfirmBanner.classList.add('is-visible');
+    cartConfirmBanner.setAttribute('aria-hidden', 'false');
+}
+
+function hideClearCartBanner() {
+    if (!cartConfirmBanner) return;
+    cartConfirmBanner.classList.remove('is-visible');
+    cartConfirmBanner.setAttribute('aria-hidden', 'true');
+}
 
 function removeCartItem(itemId) {
     const cart = loadCart();
@@ -122,6 +157,7 @@ function renderCartModal() {
         cartItemsList.innerHTML = '';
         cartEmpty.style.display = 'block';
         cartSummary.style.display = 'none';
+        hideClearCartBanner();
         return;
     }
 
@@ -140,6 +176,7 @@ function renderCartModal() {
                     ${itemImageMarkup}
                     <div class="cart-item-text">
                         <p class="cart-item-name">${item.name}</p>
+                        ${item.boxType ? `<p class="cart-item-option">Caixa: ${item.boxType}</p>` : ''}
                     </div>
                 </div>
                 <div class="cart-item-details">
@@ -170,6 +207,7 @@ function closeCartModal() {
     cartModal.classList.remove('is-open');
     cartModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    hideClearCartBanner();
 }
 
 function addCardProductToCart(card, triggerBtn) {
@@ -219,6 +257,44 @@ document.querySelectorAll('.adi-car-2').forEach(btn => {
     });
 });
 
+if (addCalcCartButton) {
+    addCalcCartButton.addEventListener('click', () => {
+        const calcData = calculateTotal();
+        if (!calcData) return;
+
+        const selectedBoxType = calcBoxSelect ? calcBoxSelect.value : 'Estojo Clássico';
+        const image = boxImageMap[selectedBoxType] || '';
+        const cart = loadCart();
+        const existing = cart.find(item => item.name === 'Pedido em Lote' && item.boxType === selectedBoxType);
+
+        if (existing) {
+            existing.quantity += calcData.quantity;
+        } else {
+            cart.push({
+                id: Date.now().toString(36),
+                name: 'Pedido em Lote',
+                boxType: selectedBoxType,
+                price: PRICE_PER_UNIT,
+                quantity: calcData.quantity,
+                image,
+                imageAlt: selectedBoxType
+            });
+        }
+
+        saveCart(cart);
+        updateCartBadge();
+        if (cartModal && cartModal.classList.contains('is-open')) {
+            renderCartModal();
+        }
+
+        const originalText = addCalcCartButton.textContent;
+        addCalcCartButton.textContent = 'Adicionado ✓';
+        setTimeout(() => {
+            addCalcCartButton.textContent = originalText;
+        }, 1000);
+    });
+}
+
 const heroAddButton = document.querySelector('.adi-car');
 if (heroAddButton) {
     heroAddButton.addEventListener('click', () => {
@@ -259,7 +335,18 @@ if (cartItemsList) {
 }
 
 if (cartClearButton) {
-    cartClearButton.addEventListener('click', clearCart);
+    cartClearButton.addEventListener('click', showClearCartBanner);
+}
+
+if (confirmClearCartButton) {
+    confirmClearCartButton.addEventListener('click', () => {
+        clearCart();
+        hideClearCartBanner();
+    });
+}
+
+if (cancelClearCartButton) {
+    cancelClearCartButton.addEventListener('click', hideClearCartBanner);
 }
 
 // Setas do carrossel de produtos no mobile
