@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <header>    
+        <header>
              <div class="logo">
                 <img src="./assets/Logo Oficial -IN.png" alt="">
                 <div class="texto-logo">
@@ -33,12 +33,6 @@
                 </ul>
             </nav>
             <button class="btn-pedido"> <strong>Ver Carrinho</strong><span class="cart-count" aria-live="polite">0</span></button>
-
-            <!-- indicador de rolagem (linha que se move horizontalmente abaixo do header) -->
-            <div class="header-scroll-indicator" aria-hidden="true">
-                <div class="header-scroll-indicator__bar"></div>
-            </div>
-
         </header>
         <section class="section-1">
             <div class="container">
@@ -65,8 +59,10 @@
                 <p>Qualidade superior para proteger seus relógios mais valiosos. Disponível em <br>diferentes modelos para
                     atender suas necessidades.</p>
             </div><!--container-2-->
-            <main class="cards" id="catalog">
-                <div class="box-1">
+            <div class="cards-wrapper">
+                <button class="cards-arrow cards-arrow-left" type="button" aria-label="Ver produtos anteriores">&#10094;</button>
+                <main class="cards" id="catalog">
+                    <div class="box-1">
                     <img src="./assets/Estojo individual.webp" alt="">
                     <div class="box-two-box">
                         <h3>Estojo Clássico</h3>
@@ -78,7 +74,7 @@
                     </div><!--box-two-box-->
                 </div><!--box-1-->
 
-                <div class="box-1">
+                    <div class="box-1">
                     <img src="./assets/Estojo Duplo.webp" alt="">
                     <div class="box-two-box">
                         <h3>Estojo Duplo</h3>
@@ -91,7 +87,7 @@
                 </div><!--box-1-->
                 
 
-                <div class="box-1">
+                    <div class="box-1">
                     <img src="./assets/Estojo Multiplo.webp" alt="">
                     <div class="box-two-box">
                         <h3>Estojo Múltiplo</h3>
@@ -101,9 +97,11 @@
                             <button class="adi-car-2">Adicionar</button>
                         </div><!--card-footer-->
                     </div><!--box-two-box-->
-                </div><!--box-1-->
+                    </div><!--box-1-->
 
-            </main>
+                </main>
+                <button class="cards-arrow cards-arrow-right" type="button" aria-label="Ver próximos produtos">&#10095;</button>
+            </div>
 
             <div class="footer-main">
                 <p>Pedido mínimo: 100 unidades | Preço unitário: R$ 2,50</p>
@@ -255,6 +253,25 @@
             </div>
         </div><!--footer-bottom-->
     </footer>
+
+    <div class="cart-modal" id="cart-modal" aria-hidden="true">
+        <div class="cart-modal-backdrop" data-close-cart></div>
+        <div class="cart-modal-content" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+            <div class="cart-modal-header">
+                <h3 id="cart-title">Seu Carrinho</h3>
+                <button class="cart-close" type="button" data-close-cart aria-label="Fechar carrinho">×</button>
+            </div>
+            <p class="cart-modal-subtitle">Veja os produtos e as quantidades adicionadas.</p>
+            <ul class="cart-items" id="cart-items"></ul>
+            <p class="cart-empty" id="cart-empty">Seu carrinho esta vazio.</p>
+            <div class="cart-summary" id="cart-summary">
+                <p>Total de itens <span id="cart-total-items">0</span></p>
+                <p>Valor total <span id="cart-total-price">R$ 0,00</span></p>
+                <button class="cart-clear" id="cart-clear" type="button">Limpar carrinho</button>
+            </div>
+        </div>
+    </div>
+
         <script src="function.js"></script>
     </body>
 
